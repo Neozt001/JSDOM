@@ -45,13 +45,25 @@ function changeText(id, text){
     // item.setAttribute(item.textContent, text);
     item.textContent = text;
 }
+changeText(4, "Vand")
+
+// Task 6 
+function countItems(list){
+    let count = 0;
+    for (const item of list){
+        console.log(count);
+        count++;
+    }
+    
+    return count;
+}
+console.log(countItems(list))
 
 function add(){
     let text = document.getElementById("add").value;
     let item = createElement(5, text, "healthy")
     addElement("list", item)
 }
-changeText(4, "Vand")
 // document.getElem
 // chentById("addButton").addEventListener("mouseover", add);
 document.getElementById("addButton").addEventListener("click", add);
