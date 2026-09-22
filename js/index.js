@@ -11,9 +11,17 @@ function createElement(id, textnode, atr){
     return newElement;
 
 }
-
 // let list = document.getElementById("list");
 // list.appendChild(addElement("Coke", "unhealthy"))
-let e = createElement("", "COLA", "healthy")
+let e = createElement("4", "COLA", "unhealthy")
+let e2 = createElement("4", "COLA", "unhealthy")
 console.log(e)
+// Task 2
+function addElement(id, item){
+    let list = document.getElementById(id);
+    list.appendChild(item);
+}
+addElement("list", e)
+addElement("list", e2)
+
 console.log("Shoppinglist End")
