@@ -23,16 +23,31 @@ function addElement(id, item){
 }
 addElement("list", e)
 addElement("list", e2)
-
 // Task 3
 function changeClass(item, atr){
     
     item.setAttribute("class", atr);
 }
+changeClass(e2, "healthy")
 // Task 4
 function deleteElement(item){
     item.remove();
 }
-changeClass(e2, "healthy")
+
 deleteElement(e2)
+
+// function add(){
+//     let a = document.getElementById("add").value;
+//     addElement(a, "healthy")
+//     let list = document.getElementById(id);
+//     list.appendChild(a);
+// }
+function add(){
+    let text = document.getElementById("add").value;
+    let item = createElement(5, text, "healthy")
+    addElement("list", item)
+}
+
+// document.getElementById("addButton").addEventListener("mouseover", add);
+document.getElementById("addButton").addEventListener("click", add);
 console.log("Shoppinglist End")
