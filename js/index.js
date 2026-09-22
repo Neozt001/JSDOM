@@ -29,5 +29,10 @@ function changeClass(item, atr){
     
     item.setAttribute("class", atr);
 }
+// Task 4
+function deleteElement(item){
+    item.remove();
+}
 changeClass(e2, "healthy")
+deleteElement(e2)
 console.log("Shoppinglist End")
