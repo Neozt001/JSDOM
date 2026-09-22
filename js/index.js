@@ -1,5 +1,6 @@
 //Write your Javascript code here
 console.log("Shoppinglist")
+
 //Task 1
 function createElement(id, textnode, atr){
     let newElement = document.createElement("li");
@@ -16,6 +17,7 @@ function createElement(id, textnode, atr){
 let e = createElement("4", "COLA", "unhealthy")
 let e2 = createElement("4", "COLA", "unhealthy")
 console.log(e)
+
 // Task 2
 function addElement(id, item){
     let list = document.getElementById(id);
@@ -23,31 +25,34 @@ function addElement(id, item){
 }
 addElement("list", e)
 addElement("list", e2)
+
 // Task 3
 function changeClass(item, atr){
     
     item.setAttribute("class", atr);
 }
 changeClass(e2, "healthy")
+
 // Task 4
 function deleteElement(item){
     item.remove();
 }
-
 deleteElement(e2)
 
-// function add(){
-//     let a = document.getElementById("add").value;
-//     addElement(a, "healthy")
-//     let list = document.getElementById(id);
-//     list.appendChild(a);
-// }
+// Task 5
+function changeText(id, text){
+    let item = document.getElementById(id);
+    // item.setAttribute(item.textContent, text);
+    item.textContent = text;
+}
+
 function add(){
     let text = document.getElementById("add").value;
     let item = createElement(5, text, "healthy")
     addElement("list", item)
 }
-
-// document.getElementById("addButton").addEventListener("mouseover", add);
+changeText(4, "Vand")
+// document.getElem
+// chentById("addButton").addEventListener("mouseover", add);
 document.getElementById("addButton").addEventListener("click", add);
 console.log("Shoppinglist End")
