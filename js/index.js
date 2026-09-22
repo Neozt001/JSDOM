@@ -24,4 +24,10 @@ function addElement(id, item){
 addElement("list", e)
 addElement("list", e2)
 
+// Task 3
+function changeClass(item, atr){
+    
+    item.setAttribute("class", atr);
+}
+changeClass(e2, "healthy")
 console.log("Shoppinglist End")
